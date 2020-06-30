@@ -1,0 +1,895 @@
+import org.openqa.selenium.By;
+
+public class AEGHome {
+    public static final By Duchovie =
+            By.cssSelector("a[href*=\"https://aeg-home.by/duhovye-shkafy\"]");
+    public static final By El =
+            By.cssSelector("a[href*=\"/duhovye-shkafy/elektricheskie\"]");
+    public static final By Sparm =
+            By.cssSelector("a[href*=\"/duhovye-shkafy/s-parom\"]");
+    public static final By Var =
+            By.cssSelector("a[href*=\"https://aeg-home.by/varochnye-paneli\"]");
+    public static final By Plan =
+            By.cssSelector("a[href*=\"/varochnye-paneli/elektricheskie\"]");
+    public static final By Gazovie =
+            By.cssSelector("a[href=\"/varochnye-paneli/gazovye\"]");
+    public static final By PaneliInduct =
+            By.cssSelector("a[href=\"/varochnye-paneli/indukcionnye\"]");
+    public static final By Log =
+            By.id("logo");
+    public static final By Plit =
+            By.cssSelector("a[href*=\"https://aeg-home.by/plity\"]");
+    public static final By Comby =
+            By.cssSelector("a[href*=\"/plity/plity-kombinirovannye\"]");
+    public static final By Inducciya =
+            By.cssSelector("a[href*=\"/plity/plity-elektricheskie-s-indukciey\"]");
+    public static final By StekKer =
+            By.cssSelector("a[href*=\"/plity/plity-elektricheskie-so-steklokeramikoy\"]");
+    public static final By PosudMash =
+            By.cssSelector("a[href*=\"https://aeg-home.by/posudomoechnye-mashiny\"]");
+    public static final By Uzkie =
+            By.cssSelector("a[href*=\"/posudomoechnye-mashiny/uzkie-posudomoechnye-mashiny\"]");
+    public static final By PolnoG =
+            By.cssSelector("a[href*=\"/posudomoechnye-mashiny/polnogabaritnye-posudomoechnye-mashiny\"]");
+    public static final By Stiralki =
+            By.cssSelector("a[href*=\"https://aeg-home.by/stiralnye-mashiny\"]");
+    public static final By Frontalnie =
+            By.cssSelector("a[href=\"/stiralnye-mashiny/stiralnye-mashiny-s-frontalnoy-zagruzkoy\"]");
+    public static final By Vertical =
+            By.cssSelector("a[href=\"/stiralnye-mashiny/stiralnye-mashiny-s-vertikalnoy-zagruzkoy\"]");
+    public static final By Sushilnie =
+            By.cssSelector("a[href*=\"https://aeg-home.by/stiralno-sushilnye-mashiny\"]");
+    public static final By Front =
+            By.cssSelector("a[href*=\"/stiralno-sushilnye-mashiny/stiralno-sushilnye-mashiny-s-frontalnoy-zagruzkoy\"]");
+    public static final By Arrow =
+            By.id("am-next");
+    public static final By Sushki =
+            By.cssSelector("a[href*=\"https://aeg-home.by/sushilnye-mashiny\"]");
+    public static final By Vityazhki =
+            By.cssSelector("a[href*=\"https://aeg-home.by/vytyazhki\"]");
+    public static final By Pechi =
+            By.cssSelector("a[href*=\"https://aeg-home.by/mikrovolnovye-pechi\"]");
+    public static final By Holodilnik =
+            By.cssSelector("a[href*=\"https://aeg-home.by/holodilniki/holodilniki-s-morozilnoy-kameroy\"]");
+    public static final By Firmsalon =
+            By.cssSelector("a[href*=\"/firmennyy-salon-bytovoy-tehniki-aeg\"]");
+    public static final By Dostavka =
+            By.cssSelector("a[href*=\"/dostavka-i-oplata\"]");
+    public static final By OKompanii =
+            By.cssSelector("a[href*=\"/o-kompanii\"]");
+    public static final By Accii =
+            By.cssSelector("a[href*=\"/stocks\"]");
+    public static final By Obzori =
+            By.cssSelector("a[href*=\"/info\"]");
+    public static final By Warranty =
+            By.cssSelector("a[href=\"/warranty\"]");
+    public static final By Search =
+            By.id("header-search");
+    public static final By Tovar1 =
+            By.cssSelector("a[href*=\"/duhovye-shkafy/ber455120m\"]");
+    public static final By VKorzinu =
+            By.id("edit-submit");
+    public static final By Korzina =
+            By.cssSelector("a[href*=\"/cart\"]");
+    public static final By Oformlenie =
+            By.id("edit-checkout");
+    public static final By EMailField =
+            By.id("edit-account-login-mail");
+    public static final By NameField =
+            By.id("edit-customer-profile-billing-field-billing-name-und-0-value");
+    public static final By Telephone =
+            By.id("edit-customer-profile-billing-field-billing-phone-und-0-value");
+    public static final By City =
+            By.id("edit-customer-profile-shipping-field-shipping-city-und-0-value");
+    public static final By Street =
+            By.id("edit-customer-profile-shipping-field-shipping-street-und-0-value");
+    public static final By Number =
+            By.id("edit-customer-profile-shipping-field-shipping-house-und-0-value");
+    public static final By Flat =
+            By.id("edit-customer-profile-shipping-field-shipping-apt-und-0-value");
+    public static final By Comment =
+            By.id("edit-customer-profile-billing-field-billing-comment-und-0-value");
+    public static final By Prodolzhit =
+            By.id("edit-continue");
+    public static final By SearchField =
+            By.xpath("//*[@id=\"header-search\"]/input");
+    public static final By HolodilnikTest =
+            By.cssSelector("a[href*=\"/holodilniki/rcb63826tx\"]");
+    public static final By VityazhkaTest =
+            By.cssSelector("a[href*=\"/vytyazhki/dce5980hm\"]");
+    public static final By VarochnayaTest =
+            By.cssSelector("a[href*=\"/varochnye-paneli/hkr64540nb\"]");
+}
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
+
+
+public class AEGNavigationChrome {
+    WebDriver driver;
+
+    @BeforeMethod
+    public void setUP() {
+        driver = new ChromeDriver();
+        driver.get("https://aeg-home.by/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    }
+    @AfterMethod()
+    public void TearDoun() {
+       driver.close();
+    }
+
+
+    @Test
+    public void checkTitleTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(),
+                "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement DuchovieShkafi = driver.findElement(AEGHome.Duchovie);
+        DuchovieShkafi.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Духовые шкафы AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement ElShkafi = driver.findElement(AEGHome.El);
+        ElShkafi.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Электрические духовые шкафы AEG 🥧");
+        driver.navigate().back();
+        WebElement Sparom = driver.findElement(AEGHome.Sparm);
+        Sparom.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Духовые шкафы с паром AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement VarPanel = driver.findElement(AEGHome.Var);
+        VarPanel.click();
+        Assert.assertEquals(driver.getTitle(),
+                "\uD83C\uDF73Варочные панели AEG- цены в каталоге");
+       // WebElement ElPan = driver.findElement(HomePage.Plan);
+       // ElPan.click();
+        //Assert.assertEquals(driver.getTitle(), "Электрические варочные панели AEG \uD83C\uDF73 - цены в каталоге");
+        WebElement Gazovie = driver.findElement(AEGHome.Gazovie);
+        Gazovie.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Газовые варочные панели AEG \uD83C\uDF73 - цены в каталоге");
+        driver.navigate().back();
+        WebElement VarPaneliMenu = driver.findElement(AEGHome.PaneliInduct);
+        VarPaneliMenu.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Индукционные варочные панели AEG 🍳");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement Plity = driver.findElement(AEGHome.Plit);
+        Plity.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Кухонные плиты AEG \uD83C\uDF72 - официальный каталог");
+        WebElement Combynirovanie = driver.findElement(AEGHome.Comby);
+        Combynirovanie.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Плиты комбинированные AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement Sindukciey = driver.findElement(AEGHome.Inducciya);
+        Sindukciey.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Плиты электрические с индукцией AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement StekloKeramika = driver.findElement(AEGHome.StekKer);
+        StekloKeramika.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Плиты электрические со стеклокерамикой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement Posudomoyki = driver.findElement(AEGHome.PosudMash);
+        Posudomoyki.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Посудомоечные машины AEG - купить в официальном магазине");
+        WebElement Uzkie = driver.findElement(AEGHome.Uzkie);
+        Uzkie.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Узкие посудомоечные машины AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement Polnogabarit = driver.findElement(AEGHome.PolnoG);
+        Polnogabarit.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Полногабаритные посудомоечные машины AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement StiralMashin = driver.findElement(AEGHome.Stiralki);
+        StiralMashin.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Стиральные машины AEG - купить в официальном магазине");
+        WebElement Frontalnie = driver.findElement(AEGHome.Frontalnie);
+        Frontalnie.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Стиральные машины с фронтальной загрузкой AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement SVerticalnoyZ = driver.findElement(AEGHome.Vertical);
+        SVerticalnoyZ.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Стиральные машины с вертикальной загрузкой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement Sushilnie = driver.findElement(AEGHome.Sushilnie);
+        Sushilnie.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Стирально-сушильные машины AEG - цены в каталоге AEG");
+        WebElement Frontlnie = driver.findElement(AEGHome.Front);
+        Frontlnie.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Стирально-сушильные машины с фронтальной загрузкой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        WebElement Sushki = driver.findElement(AEGHome.Sushki);
+        Sushki.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Сушильные машины AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Vityazhki = driver.findElement(AEGHome.Vityazhki);
+        Vityazhki.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Кухонные вытяжки AEG - цены в каталоге");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Pechi = driver.findElement(AEGHome.Pechi);
+        Pechi.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Микроволновые печи AEG \uD83C\uDF72 - официальный магазин");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Holodilnik = driver.findElement(AEGHome.Holodilnik);
+        Holodilnik.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Холодильники с морозильной камерой AEG - цены в каталоге");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement FirmSalon = driver.findElement(AEGHome.Firmsalon);
+        FirmSalon.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Фирменный салон бытовой техники AEG | AEG");
+        WebElement Dostavka = driver.findElement(AEGHome.Dostavka);
+        Dostavka.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Доставка и оплата | AEG");
+        WebElement OKompanii = driver.findElement(AEGHome.OKompanii);
+        OKompanii.click();
+        Assert.assertEquals(driver.getTitle(),
+                "О компании | AEG");
+        WebElement Accii = driver.findElement(AEGHome.Accii);
+        Accii.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Акции | AEG");
+        WebElement Obzori = driver.findElement(AEGHome.Obzori);
+        Obzori.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Обзоры и статьи | AEG");
+        WebElement Warranty = driver.findElement(AEGHome.Warranty);
+        Warranty.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Гарантия | AEG");
+
+
+    }
+    @Test
+    public void BuscketTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(),
+                "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement DuchovieShkafi = driver.findElement(AEGHome.Duchovie);
+        DuchovieShkafi.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Духовые шкафы AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement Tovar = driver.findElement(AEGHome.Tovar1);
+        Tovar.click();
+        Assert.assertEquals(driver.getTitle(),
+                "BER455120M Духовой шкаф за 1,470.00 руб.");
+        WebElement VKorzinu = driver.findElement(AEGHome.VKorzinu);
+        VKorzinu.click();
+        WebElement Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(5000);
+        WebElement Korzina = driver.findElement(AEGHome.Korzina);
+        Korzina.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Корзина | AEG");
+        WebElement OformitZakaz = driver.findElement(AEGHome.Oformlenie);
+        OformitZakaz.click();
+        WebElement EMailField = driver.findElement(AEGHome.EMailField);
+        EMailField.click();
+        EMailField.sendKeys("test@mail.ru");
+        WebElement NameField = driver.findElement(AEGHome.NameField);
+        NameField.click();
+        NameField.sendKeys("test name");
+        WebElement Telephone = driver.findElement(AEGHome.Telephone);
+        Telephone.click();
+        Telephone.sendKeys("299999999");
+        WebElement City = driver.findElement(AEGHome.City);
+        City.click();
+        City.sendKeys("Test city");
+        WebElement Street = driver.findElement(AEGHome.Street);
+        Street.click();
+        Street.sendKeys("test street");
+        WebElement Number = driver.findElement(AEGHome.Number);
+        Number.click();
+        Number.sendKeys("123");
+        WebElement Flat = driver.findElement(AEGHome.Flat);
+        Flat.click();
+        Flat.sendKeys("12");
+        WebElement Comment = driver.findElement(AEGHome.Comment);
+        Comment.click();
+        Comment.sendKeys("test test 123 test 1234 test");
+        WebElement Prodolzhit = driver.findElement(AEGHome.Prodolzhit);
+        Prodolzhit.click();
+        Assert.assertEquals(driver.getTitle(),
+                "Проверка заказа | AEG");
+        Korzina = driver.findElement(AEGHome.Korzina);
+        Korzina.click();
+
+    }
+    @Test
+    public void SearchTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(),
+                "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("холодильник");
+        Thread.sleep(1000);
+        WebElement HolodilnikTest = driver.findElement(AEGHome.HolodilnikTest);
+        HolodilnikTest.click();
+        Assert.assertEquals(driver.getTitle(),
+                "RCB63826TX холодильник за 3,200.00 руб.");
+        SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("вытяжка");
+        Thread.sleep(1000);
+        WebElement VityzkaTest = driver.findElement(AEGHome.VityazhkaTest);
+        VityzkaTest.click();
+        Assert.assertEquals(driver.getTitle(),
+                "DCE5980HM вытяжка за 2,630.00 руб.");
+        SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("варочная");
+        Thread.sleep(1000);
+        WebElement VarochnayaTest = driver.findElement(AEGHome.VarochnayaTest);
+        VarochnayaTest.click();
+        Assert.assertEquals(driver.getTitle(),
+                "HKR64540NB варочная панель за 1,130.00 руб.");
+
+    }
+}
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
+
+
+public class AEGNavigationEdge {
+    WebDriver driver;
+
+    @BeforeMethod
+    public void setUP() {
+        driver = new EdgeDriver();
+        driver.get("https://aeg-home.by/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    }
+    @AfterMethod()
+    public void TearDoun() {
+        //driver.close();
+    }
+
+
+    @Test
+    public void checkTitleTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(), "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement DuchovieShkafi = driver.findElement(AEGHome.Duchovie);
+        DuchovieShkafi.click();
+        Thread.sleep(6000);
+        Assert.assertEquals(driver.getTitle(), "Духовые шкафы AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement ElShkafi = driver.findElement(AEGHome.El);
+        ElShkafi.click();
+        Thread.sleep(6000);
+        Assert.assertEquals(driver.getTitle(), "Электрические духовые шкафы AEG 🥧");
+        driver.navigate().back();
+        WebElement Sparom = driver.findElement(AEGHome.Sparm);
+        Sparom.click();
+        Thread.sleep(6000);
+        Assert.assertEquals(driver.getTitle(), "Духовые шкафы с паром AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(2000);
+        WebElement VarPanel = driver.findElement(AEGHome.Var);
+        VarPanel.click();
+        Thread.sleep(6000);
+        Assert.assertEquals(driver.getTitle(), "\uD83C\uDF73Варочные панели AEG- цены в каталоге");
+        // WebElement ElPan = driver.findElement(HomePage.Plan);
+        // ElPan.click();
+        //Assert.assertEquals(driver.getTitle(), "Электрические варочные панели AEG \uD83C\uDF73 - цены в каталоге");
+        WebElement Gazovie = driver.findElement(AEGHome.Gazovie);
+        Gazovie.click();
+        Thread.sleep(6000);
+        Assert.assertEquals(driver.getTitle(), "Газовые варочные панели AEG \uD83C\uDF73 - цены в каталоге");
+        driver.navigate().back();
+        WebElement VarPaneliMenu = driver.findElement(AEGHome.PaneliInduct);
+        VarPaneliMenu.click();
+        Thread.sleep(6000);
+        Assert.assertEquals(driver.getTitle(), "Индукционные варочные панели AEG 🍳");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        WebElement Plity = driver.findElement(AEGHome.Plit);
+        Plity.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(), "Кухонные плиты AEG \uD83C\uDF72 - официальный каталог");
+        WebElement Combynirovanie = driver.findElement(AEGHome.Comby);
+        Combynirovanie.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(), "Плиты комбинированные AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement Sindukciey = driver.findElement(AEGHome.Inducciya);
+        Sindukciey.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(), "Плиты электрические с индукцией AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement StekloKeramika = driver.findElement(AEGHome.StekKer);
+        StekloKeramika.click();
+        Thread.sleep(2000);
+        Assert.assertEquals(driver.getTitle(),"Плиты электрические со стеклокерамикой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        WebElement Posudomoyki = driver.findElement(AEGHome.PosudMash);
+        Posudomoyki.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Посудомоечные машины AEG - купить в официальном магазине");
+        WebElement Uzkie = driver.findElement(AEGHome.Uzkie);
+        Uzkie.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Узкие посудомоечные машины AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement Polnogabarit = driver.findElement(AEGHome.PolnoG);
+        Polnogabarit.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Полногабаритные посудомоечные машины AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        WebElement StiralMashin = driver.findElement(AEGHome.Stiralki);
+        StiralMashin.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Стиральные машины AEG - купить в официальном магазине");
+        WebElement Frontalnie = driver.findElement(AEGHome.Frontalnie);
+        Frontalnie.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Стиральные машины с фронтальной загрузкой AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement SVerticalnoyZ = driver.findElement(AEGHome.Vertical);
+        SVerticalnoyZ.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Стиральные машины с вертикальной загрузкой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        WebElement Sushilnie = driver.findElement(AEGHome.Sushilnie);
+        Sushilnie.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Стирально-сушильные машины AEG - цены в каталоге AEG");
+        WebElement Frontlnie = driver.findElement(AEGHome.Front);
+        Frontlnie.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Стирально-сушильные машины с фронтальной загрузкой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        WebElement ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        WebElement Sushki = driver.findElement(AEGHome.Sushki);
+        Sushki.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Сушильные машины AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Vityazhki = driver.findElement(AEGHome.Vityazhki);
+        Vityazhki.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Кухонные вытяжки AEG - цены в каталоге");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Pechi = driver.findElement(AEGHome.Pechi);
+        Pechi.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Микроволновые печи AEG \uD83C\uDF72 - официальный магазин");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Holodilnik = driver.findElement(AEGHome.Holodilnik);
+        Holodilnik.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Холодильники с морозильной камерой AEG - цены в каталоге");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(1000);
+        WebElement FirmSalon = driver.findElement(AEGHome.Firmsalon);
+        FirmSalon.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Фирменный салон бытовой техники AEG | AEG");
+        WebElement Dostavka = driver.findElement(AEGHome.Dostavka);
+        Dostavka.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Доставка и оплата | AEG");
+        WebElement OKompanii = driver.findElement(AEGHome.OKompanii);
+        OKompanii.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"О компании | AEG");
+        WebElement Accii = driver.findElement(AEGHome.Accii);
+        Accii.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Акции | AEG");
+        WebElement Obzori = driver.findElement(AEGHome.Obzori);
+        Obzori.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Обзоры и статьи | AEG");
+        WebElement Warranty = driver.findElement(AEGHome.Warranty);
+        Warranty.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"Гарантия | AEG");
+
+    }
+
+    @Test
+    public void BuscketTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(), "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement DuchovieShkafi = driver.findElement(AEGHome.Duchovie);
+        DuchovieShkafi.click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.getTitle(), "Духовые шкафы AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement Tovar = driver.findElement(AEGHome.Tovar1);
+        Tovar.click();
+        Thread.sleep(10000);
+        Assert.assertEquals(driver.getTitle(), "BER455120M Духовой шкаф за 1,470.00 руб.");
+        WebElement VKorzinu = driver.findElement(AEGHome.VKorzinu);
+        VKorzinu.click();
+        WebElement Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(5000);
+        WebElement Korzina = driver.findElement(AEGHome.Korzina);
+        Korzina.click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.getTitle(), "Корзина | AEG");
+        WebElement OformitZakaz = driver.findElement(AEGHome.Oformlenie);
+        OformitZakaz.click();
+        Thread.sleep(3000);
+        WebElement EMailField = driver.findElement(AEGHome.EMailField);
+        EMailField.click();
+        EMailField.sendKeys("test@mail.ru");
+        WebElement NameField = driver.findElement(AEGHome.NameField);
+        NameField.click();
+        NameField.sendKeys("test name");
+        WebElement Telephone = driver.findElement(AEGHome.Telephone);
+        Telephone.click();
+        Telephone.sendKeys("299999999");
+        WebElement City = driver.findElement(AEGHome.City);
+        City.click();
+        City.sendKeys("Test city");
+        WebElement Street = driver.findElement(AEGHome.Street);
+        Street.click();
+        Street.sendKeys("test street");
+        WebElement Number = driver.findElement(AEGHome.Number);
+        Number.click();
+        Number.sendKeys("123");
+        WebElement Flat = driver.findElement(AEGHome.Flat);
+        Flat.click();
+        Flat.sendKeys("12");
+        WebElement Comment = driver.findElement(AEGHome.Comment);
+        Comment.click();
+        Comment.sendKeys("test test 123 test 1234 test");
+        Thread.sleep(1000);
+        WebElement Prodolzhit = driver.findElement(AEGHome.Prodolzhit);
+        Prodolzhit.click();
+        Thread.sleep(10000);
+        Assert.assertEquals(driver.getTitle(),"Проверка заказа | AEG");
+        Korzina = driver.findElement(AEGHome.Korzina);
+        Korzina.click();
+
+    }
+    @Test
+    public void SearchTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(), "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("холодильник");
+        Thread.sleep(1000);
+        WebElement HolodilnikTest = driver.findElement(AEGHome.HolodilnikTest);
+        HolodilnikTest.click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.getTitle(),"RCB63826TX холодильник за 3,200.00 руб.");
+        SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("вытяжка");
+        Thread.sleep(1000);
+        WebElement VityzkaTest = driver.findElement(AEGHome.VityazhkaTest);
+        VityzkaTest.click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.getTitle(),"DCE5980HM вытяжка за 2,630.00 руб.");
+        SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("варочная");
+        Thread.sleep(1000);
+        WebElement VarochnayaTest = driver.findElement(AEGHome.VarochnayaTest);
+        VarochnayaTest.click();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.getTitle(),"HKR64540NB варочная панель за 1,099.00 руб.");
+
+    }
+}
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
+
+
+public class AEGNavigationFirefox {
+    WebDriver driver;
+
+    @BeforeMethod
+    public void setUP() {
+        driver = new FirefoxDriver();
+        driver.get("https://aeg-home.by/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    }
+    @AfterMethod()
+    public void TearDoun() {
+         driver.close();
+    }
+
+
+    @Test
+    public void checkTitleTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(), "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement DuchovieShkafi = driver.findElement(AEGHome.Duchovie);
+        DuchovieShkafi.click();
+        Assert.assertEquals(driver.getTitle(), "Духовые шкафы AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement ElShkafi = driver.findElement(AEGHome.El);
+        ElShkafi.click();
+        Assert.assertEquals(driver.getTitle(), "Электрические духовые шкафы AEG 🥧");
+        driver.navigate().back();
+        WebElement Sparom = driver.findElement(AEGHome.Sparm);
+        Sparom.click();
+        Assert.assertEquals(driver.getTitle(), "Духовые шкафы с паром AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement VarPanel = driver.findElement(AEGHome.Var);
+        VarPanel.click();
+        Assert.assertEquals(driver.getTitle(), "\uD83C\uDF73Варочные панели AEG- цены в каталоге");
+        // WebElement ElPan = driver.findElement(HomePage.Plan);
+        // ElPan.click();
+        //Assert.assertEquals(driver.getTitle(), "Электрические варочные панели AEG \uD83C\uDF73 - цены в каталоге");
+        WebElement Gazovie = driver.findElement(AEGHome.Gazovie);
+        Gazovie.click();
+        Assert.assertEquals(driver.getTitle(), "Газовые варочные панели AEG \uD83C\uDF73 - цены в каталоге");
+        driver.navigate().back();
+        WebElement VarPaneliMenu = driver.findElement(AEGHome.PaneliInduct);
+        VarPaneliMenu.click();
+        Assert.assertEquals(driver.getTitle(), "Индукционные варочные панели AEG 🍳");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement Plity = driver.findElement(AEGHome.Plit);
+        Plity.click();
+        Assert.assertEquals(driver.getTitle(), "Кухонные плиты AEG \uD83C\uDF72 - официальный каталог");
+        WebElement Combynirovanie = driver.findElement(AEGHome.Comby);
+        Combynirovanie.click();
+        Assert.assertEquals(driver.getTitle(), "Плиты комбинированные AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement Sindukciey = driver.findElement(AEGHome.Inducciya);
+        Sindukciey.click();
+        Assert.assertEquals(driver.getTitle(), "Плиты электрические с индукцией AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement StekloKeramika = driver.findElement(AEGHome.StekKer);
+        StekloKeramika.click();
+        Assert.assertEquals(driver.getTitle(),"Плиты электрические со стеклокерамикой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement Posudomoyki = driver.findElement(AEGHome.PosudMash);
+        Posudomoyki.click();
+        Assert.assertEquals(driver.getTitle(),"Посудомоечные машины AEG - купить в официальном магазине");
+        WebElement Uzkie = driver.findElement(AEGHome.Uzkie);
+        Uzkie.click();
+        Assert.assertEquals(driver.getTitle(),"Узкие посудомоечные машины AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement Polnogabarit = driver.findElement(AEGHome.PolnoG);
+        Polnogabarit.click();
+        Assert.assertEquals(driver.getTitle(),"Полногабаритные посудомоечные машины AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement StiralMashin = driver.findElement(AEGHome.Stiralki);
+        StiralMashin.click();
+        Assert.assertEquals(driver.getTitle(),"Стиральные машины AEG - купить в официальном магазине");
+        WebElement Frontalnie = driver.findElement(AEGHome.Frontalnie);
+        Frontalnie.click();
+        Assert.assertEquals(driver.getTitle(),"Стиральные машины с фронтальной загрузкой AEG - цены в каталоге AEG");
+        driver.navigate().back();
+        WebElement SVerticalnoyZ = driver.findElement(AEGHome.Vertical);
+        SVerticalnoyZ.click();
+        Assert.assertEquals(driver.getTitle(),"Стиральные машины с вертикальной загрузкой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement Sushilnie = driver.findElement(AEGHome.Sushilnie);
+        Sushilnie.click();
+        Assert.assertEquals(driver.getTitle(),"Стирально-сушильные машины AEG - цены в каталоге AEG");
+        WebElement Frontlnie = driver.findElement(AEGHome.Front);
+        Frontlnie.click();
+        Assert.assertEquals(driver.getTitle(),"Стирально-сушильные машины с фронтальной загрузкой AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        WebElement Sushki = driver.findElement(AEGHome.Sushki);
+        Sushki.click();
+        Assert.assertEquals(driver.getTitle(),"Сушильные машины AEG - цены в каталоге AEG");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Vityazhki = driver.findElement(AEGHome.Vityazhki);
+        Vityazhki.click();
+        Assert.assertEquals(driver.getTitle(),"Кухонные вытяжки AEG - цены в каталоге");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Pechi = driver.findElement(AEGHome.Pechi);
+        Pechi.click();
+        Assert.assertEquals(driver.getTitle(),"Микроволновые печи AEG \uD83C\uDF72 - официальный магазин");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        ArrowAhead = driver.findElement(AEGHome.Arrow);
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        ArrowAhead.click();
+        WebElement Holodilnik = driver.findElement(AEGHome.Holodilnik);
+        Holodilnik.click();
+        Assert.assertEquals(driver.getTitle(),"Холодильники с морозильной камерой AEG - цены в каталоге");
+        Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        WebElement FirmSalon = driver.findElement(AEGHome.Firmsalon);
+        FirmSalon.click();
+        Assert.assertEquals(driver.getTitle(),"Фирменный салон бытовой техники AEG | AEG");
+        WebElement Dostavka = driver.findElement(AEGHome.Dostavka);
+        Dostavka.click();
+        Assert.assertEquals(driver.getTitle(),"Доставка и оплата | AEG");
+        WebElement OKompanii = driver.findElement(AEGHome.OKompanii);
+        OKompanii.click();
+        Assert.assertEquals(driver.getTitle(),"О компании | AEG");
+        WebElement Accii = driver.findElement(AEGHome.Accii);
+        Accii.click();
+        Assert.assertEquals(driver.getTitle(),"Акции | AEG");
+        WebElement Obzori = driver.findElement(AEGHome.Obzori);
+        Obzori.click();
+        Assert.assertEquals(driver.getTitle(),"Обзоры и статьи | AEG");
+        WebElement Warranty = driver.findElement(AEGHome.Warranty);
+        Warranty.click();
+        Assert.assertEquals(driver.getTitle(),"Гарантия | AEG");
+
+    }
+
+    @Test
+    public void BuscketTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(), "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement DuchovieShkafi = driver.findElement(AEGHome.Duchovie);
+        DuchovieShkafi.click();
+        Assert.assertEquals(driver.getTitle(), "Духовые шкафы AEG \uD83E\uDD67 - цены в каталоге AEG");
+        WebElement Tovar = driver.findElement(AEGHome.Tovar1);
+        Tovar.click();
+        Assert.assertEquals(driver.getTitle(), "BER455120M Духовой шкаф за 1,470.00 руб.");
+        WebElement VKorzinu = driver.findElement(AEGHome.VKorzinu);
+        VKorzinu.click();
+        WebElement Logo = driver.findElement(AEGHome.Log);
+        Logo.click();
+        Thread.sleep(5000);
+        WebElement Korzina = driver.findElement(AEGHome.Korzina);
+        Korzina.click();
+        Assert.assertEquals(driver.getTitle(), "Корзина | AEG");
+        WebElement OformitZakaz = driver.findElement(AEGHome.Oformlenie);
+        OformitZakaz.click();
+        WebElement EMailField = driver.findElement(AEGHome.EMailField);
+        EMailField.click();
+        EMailField.sendKeys("test@mail.ru");
+        WebElement NameField = driver.findElement(AEGHome.NameField);
+        NameField.click();
+        NameField.sendKeys("test name");
+        WebElement Telephone = driver.findElement(AEGHome.Telephone);
+        Telephone.click();
+        Telephone.sendKeys("299999999");
+        WebElement City = driver.findElement(AEGHome.City);
+        City.click();
+        City.sendKeys("Test city");
+        WebElement Street = driver.findElement(AEGHome.Street);
+        Street.click();
+        Street.sendKeys("test street");
+        WebElement Number = driver.findElement(AEGHome.Number);
+        Number.click();
+        Number.sendKeys("123");
+        WebElement Flat = driver.findElement(AEGHome.Flat);
+        Flat.click();
+        Flat.sendKeys("12");
+        WebElement Comment = driver.findElement(AEGHome.Comment);
+        Comment.click();
+        Comment.sendKeys("test test 123 test 1234 test");
+        WebElement Prodolzhit = driver.findElement(AEGHome.Prodolzhit);
+        Prodolzhit.click();
+        Assert.assertEquals(driver.getTitle(),"Проверка заказа | AEG");
+        Korzina = driver.findElement(AEGHome.Korzina);
+        Korzina.click();
+
+    }
+    @Test
+    public void SearchTest() throws InterruptedException {
+        Assert.assertEquals(driver.getTitle(), "Интернет-магазин AEG \uD83C\uDF0D Официальный сайт AEG, Беларусь \uD83C\uDDE7\uD83C\uDDFE");
+        WebElement SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("холодильник");
+        Thread.sleep(1000);
+        WebElement HolodilnikTest = driver.findElement(AEGHome.HolodilnikTest);
+        HolodilnikTest.click();
+        Assert.assertEquals(driver.getTitle(),"RCB63826TX холодильник за 3,200.00 руб.");
+        SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("вытяжка");
+        Thread.sleep(1000);
+        WebElement VityzkaTest = driver.findElement(AEGHome.VityazhkaTest);
+        VityzkaTest.click();
+        Assert.assertEquals(driver.getTitle(),"DCE5980HM вытяжка за 2,630.00 руб.");
+        SearchField = driver.findElement(AEGHome.SearchField);
+        SearchField.sendKeys("варочная");
+        Thread.sleep(1000);
+        WebElement VarochnayaTest = driver.findElement(AEGHome.VarochnayaTest);
+        VarochnayaTest.click();
+        Assert.assertEquals(driver.getTitle(),"HKR64540NB варочная панель за 1,099.00 руб.");
+
+    }
+}
